@@ -1,0 +1,46 @@
+<p>list works!</p>
+<html>
+    <body style="text-align: center;">
+        <div class="login-page">
+<table  >
+    <thead>
+        <tr>
+            <th>MatchId</th>
+            <th>TeamOne</th>
+            <th>TeamTwo</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Stadium</th>
+            <th>Winner</th>
+            <th>Status</th>
+            <th>Delay</th>
+            <th>Edit</th>
+            
+        </tr>
+    </thead>
+    <tbody *ngFor='let match of matches'   >
+        <tr>
+            <td>{{match.matchId}}</td>
+            <td>{{match.teamOne}}</td>
+            <td>{{match.teamTwo}}</td>
+            <td>{{match.date}}</td>
+            <td>{{match.time}}</td>
+            <td>{{match.stadium}}</td>
+            <td>{{match.winner}}</td>
+            <td>{{match.status}}</td>
+            <td>{{match.delay}}</td>
+            <td><a [routerLink]='["/edit",match.matchId]'>Edit</a></td>
+            
+          
+          
+            
+        </tr>
+       
+    </tbody>
+    
+</table>
+
+
+</div>
+</body>
+</html>

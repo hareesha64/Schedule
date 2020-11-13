@@ -1,0 +1,57 @@
+<p>edit works!</p>
+<html><body>
+    <h1 style="text-align: center;">Edit Form</h1>
+<form class="login-page" #editForm='ngForm' (ngSubmit)='editForm.valid && edit()'>
+  <label>Matchid
+     <input type='number' [(ngModel)]='editMatch.matchId' name='matchId' id='matchId' disabled #matchId=ngModel>
+  </label>
+  <br>
+  <label>TeamOne
+      <input type='text' [(ngModel)]='editMatch.teamOne' name='teamOne' id='teamOne' disabled #teamOne=ngModel>
+   </label>
+   <br>
+   <label>TeamTwo
+      <input type='text' [(ngModel)]='editMatch.teamTwo' name='teamTwo' id='teamTwo' disabled #teamTwo=ngModel>
+   </label>
+   <br>
+   <label>Date
+      <input type='date' [(ngModel)]='editMatch.date'  name='date' id='date' disabled #date=ngModel>
+   </label>
+   <br>
+   <label>Time
+    <input type='time' [(ngModel)]='editMatch.time'  name='time' id='time' disabled #time=ngModel>
+ </label>
+ <br>
+ <label>Stadium
+    <input type='text' [(ngModel)]='editMatch.stadium'  name='stadium' id='stadium' disabled #stadium=ngModel>
+ </label>
+ <br>
+ <label>winner
+    <input type='text' [(ngModel)]='editMatch.winner'  name='winner' id='winner' #winner=ngModel>
+ </label>
+ <br>
+ <label>Status
+   
+    <select [(ngModel)]='editMatch.status'  name='status' id='status'  #status=ngModel>
+      <option value="Completed">Completed</option>
+      <option value="InProgress">InProgress</option>
+      <option value="Delayed">Delayed</option>
+      <option value="YetToStart">YetToStart</option>
+    </select>
+ </label>
+ <br>
+ <label>delay
+    <input type='text' [(ngModel)]='editMatch.delay'  name='delay' id='delay'  #delay=ngModel>
+ </label>
+ <br>
+
+   
+  <div class="form-group">
+  <button type="submit" class="btn btn-success center-block">Edit</button>
+  </div>
+</form>
+<div *ngIf="edited">
+  <button routerLink="/list"style="font-size : 30px; width: 20%; height: 50px;">Show List</button>  <br><br>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+
+        table,th,td {
+ 
+            border: 1px solid black;
+            widows: 100%;
+           }
+           
+           table,th, td {
+            text-align: left;
+            padding: 8px;
+           }
+           
+           tr:nth-child(even) {
+            background-color:yellow;
+           }
+           
+                   
+                  
+           
+          
+           
+           a {
+             color: dodgerblue;
+           }
+           .login-page {
+             width: 360px;
+             padding: 10% 0 0;
+             margin: auto;
+           }
